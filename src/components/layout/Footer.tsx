@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
     <footer
       style={{
         background: 'var(--nf-white)',
-        padding: '90px 32px 0',
+        padding: '60px 32px 0',
         borderTop: '1px solid var(--border-light)',
       }}
     >
@@ -17,25 +17,25 @@ export const Footer: React.FC = () => {
             display: 'grid',
             gridTemplateColumns: '1.2fr 1fr 1fr 1fr',
             gap: '40px',
-            marginBottom: '64px',
+            marginBottom: '40px',
           }}
         >
           <div>
             <div
               style={{
                 display: 'inline-block',
-                marginBottom: '18px',
+                marginBottom: '16px',
               }}
             >
               <img
                 src={logoCircle}
                 alt="NForceOne"
                 style={{
-                  height: '52px',
-                  width: '52px',
+                  height: '60px',
+                  width: '60px',
                   borderRadius: '50%',
                   display: 'block',
-                  boxShadow: '0 2px 12px rgba(0, 0, 0, 0.45)',
+                  boxShadow: '0 2px 14px rgba(0, 0, 0, 0.45)',
                 }}
               />
             </div>

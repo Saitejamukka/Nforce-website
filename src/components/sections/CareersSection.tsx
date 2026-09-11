@@ -16,7 +16,7 @@ export const CareersSection: React.FC = () => {
     <section
       id="careers"
       style={{
-        padding: '140px 32px',
+        padding: '84px 32px 72px',
         background: 'var(--nf-white)',
         borderTop: '1px solid var(--border-light)',
         position: 'relative',
@@ -38,7 +38,7 @@ export const CareersSection: React.FC = () => {
       />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
-        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <Eyebrow>Careers</Eyebrow>
           <h2
             style={{

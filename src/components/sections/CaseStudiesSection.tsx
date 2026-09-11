@@ -151,7 +151,7 @@ export const CaseStudiesSection: React.FC = () => {
     <section
       id="outcomes"
       style={{
-        padding: '130px 32px 110px',
+        padding: '84px 32px 72px',
         background: '#FFFFFF',
         color: 'var(--nf-ink-950)',
         position: 'relative',
@@ -163,7 +163,7 @@ export const CaseStudiesSection: React.FC = () => {
     >
       <div style={{ maxWidth: '1380px', margin: '0 auto' }}>
         {/* Editorial Section Introduction */}
-        <div style={{ maxWidth: '780px', marginBottom: '60px' }}>
+        <div style={{ maxWidth: '780px', marginBottom: '38px' }}>
           <div
             style={{
               fontFamily: 'var(--font-mono)',

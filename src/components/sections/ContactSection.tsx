@@ -80,7 +80,7 @@ export const ContactSection: React.FC = () => {
     <section
       id="contact"
       style={{
-        padding: '140px 32px',
+        padding: '84px 32px 72px',
         background: 'var(--nf-white)',
         position: 'relative',
         overflow: 'hidden',
@@ -107,7 +107,7 @@ export const ContactSection: React.FC = () => {
           margin: '0 auto',
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: '80px',
+          gap: '56px',
         }}
       >
         {/* Left Column */}

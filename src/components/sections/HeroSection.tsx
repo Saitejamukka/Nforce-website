@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        padding: '160px 32px 80px',
+        padding: '128px 32px 56px',
         overflow: 'hidden',
         background: 'var(--nf-ink-950)',
       }}
@@ -188,7 +188,7 @@ export const HeroSection: React.FC = () => {
               color: 'rgba(255, 255, 255, 0.84)',
               lineHeight: 1.6,
               maxWidth: '620px',
-              margin: '0 0 32px',
+              margin: '0 0 24px',
             }}
           >
             Engineering enterprise-scale software, autonomous AI solutions, and zero-defect QA systems
@@ -204,7 +204,7 @@ export const HeroSection: React.FC = () => {
               gap: '16px',
               flexWrap: 'wrap',
               alignItems: 'center',
-              marginBottom: '36px',
+              marginBottom: '26px',
             }}
           >
             {/* Primary CTA with Ambient Glow & Shimmer */}

@@ -8,7 +8,7 @@ export const PartnersMarquee: React.FC = () => {
   return (
     <section
       style={{
-        padding: '80px 0',
+        padding: '48px 0',
         background: 'var(--nf-gray-100)',
         borderTop: '1px solid var(--border-light)',
       }}
@@ -20,7 +20,7 @@ export const PartnersMarquee: React.FC = () => {
             fontFamily: 'var(--font-display)',
             fontSize: '20px',
             fontWeight: 700,
-            margin: '14px 0 40px',
+            margin: '12px 0 28px',
           }}
         >
           Recognized &amp; Trusted by Leading Technology Providers

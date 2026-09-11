@@ -91,7 +91,7 @@ export const ProductsSection: React.FC = () => {
     <section
       id="products"
       style={{
-        padding: '140px 32px 110px',
+        padding: '84px 32px 72px',
         background: '#FFFFFF',
         color: 'var(--nf-ink-950)',
         position: 'relative',
@@ -101,7 +101,7 @@ export const ProductsSection: React.FC = () => {
     >
       <div style={{ maxWidth: '1380px', margin: '0 auto' }}>
         {/* 1. Hero / Header Introduction */}
-        <div style={{ maxWidth: '820px', marginBottom: '60px' }}>
+        <div style={{ maxWidth: '820px', marginBottom: '38px' }}>
           <div
             style={{
               fontFamily: 'var(--font-mono)',

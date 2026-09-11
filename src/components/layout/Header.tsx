@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
         style={{
           maxWidth: '1400px',
           margin: '0 auto',
-          padding: isScrolled ? '12px 32px' : '18px 32px',
+          padding: isScrolled ? '10px 32px' : '14px 32px',
           transition: 'padding 300ms var(--ease-out)',
           display: 'flex',
           alignItems: 'center',
@@ -78,12 +78,12 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
             src={logoCircle}
             alt="NForceOne"
             style={{
-              height: isScrolled ? '46px' : 'clamp(46px, 4.4vw, 56px)',
-              width: isScrolled ? '46px' : 'clamp(46px, 4.4vw, 56px)',
+              height: isScrolled ? '50px' : 'clamp(52px, 5.2vw, 68px)',
+              width: isScrolled ? '50px' : 'clamp(52px, 5.2vw, 68px)',
               borderRadius: '50%',
               display: 'block',
               transition: 'all 300ms var(--ease-out)',
-              boxShadow: '0 2px 12px rgba(0, 0, 0, 0.45)',
+              boxShadow: '0 2px 14px rgba(0, 0, 0, 0.55)',
             }}
           />
         </a>

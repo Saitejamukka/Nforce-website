@@ -32,7 +32,7 @@ export const TelecomSection: React.FC = () => {
         color: '#ffffff',
         borderTop: '1px solid rgba(255, 255, 255, 0.08)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-        padding: '130px 32px 110px',
+        padding: '84px 32px 72px',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -53,7 +53,7 @@ export const TelecomSection: React.FC = () => {
 
       <div style={{ maxWidth: '1400px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
         {/* Header Block */}
-        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 60px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 40px' }}>
           <Eyebrow>Strategic Domain Differentiator</Eyebrow>
           <h2
             style={{

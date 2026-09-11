@@ -8,7 +8,7 @@ export const AboutSection: React.FC = () => {
     <section
       id="about"
       style={{
-        padding: '120px 32px 110px',
+        padding: '84px 32px 72px',
         background: '#FFFFFF',
         color: '#0F172A',
         borderTop: '1px solid #EDEDED',
@@ -23,7 +23,7 @@ export const AboutSection: React.FC = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 360px), 1fr))',
             gap: '48px',
             alignItems: 'end',
-            marginBottom: '64px',
+            marginBottom: '40px',
           }}
         >
           <div>

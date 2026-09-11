@@ -175,7 +175,7 @@ export const EngagementModelsSection: React.FC = () => {
         color: '#0F172A',
         borderTop: '1px solid #EDEDED',
         borderBottom: '1px solid #EDEDED',
-        padding: '120px 32px 110px',
+        padding: '84px 32px 72px',
         position: 'relative',
         overflow: 'hidden',
       }}

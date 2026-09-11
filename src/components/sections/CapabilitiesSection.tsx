@@ -103,7 +103,7 @@ export const CapabilitiesSection: React.FC = () => {
     <section
       id="capabilities"
       style={{
-        padding: '120px 32px 110px',
+        padding: '84px 32px 72px',
         background: '#FFFFFF',
         color: '#0F172A',
         position: 'relative',
@@ -114,7 +114,7 @@ export const CapabilitiesSection: React.FC = () => {
     >
       <div style={{ maxWidth: '1380px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto 56px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto 40px' }}>
           <div style={{ animation: 'nfFadeUp 600ms var(--ease-out) both' }}>
             <Eyebrow>01 / What We Do</Eyebrow>
           </div>

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { FAQS } from '../../data/companyData';
 import { Eyebrow } from '../ui/Eyebrow';
 import { ChevronDown } from 'lucide-react';
@@ -14,13 +14,13 @@ export const FaqSection: React.FC = () => {
     <section
       id="faq"
       style={{
-        padding: '120px 32px',
+        padding: '84px 32px 72px',
         background: 'var(--nf-white)',
         borderTop: '1px solid var(--border-light)',
       }}
     >
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '38px' }}>
           <Eyebrow>Got Questions?</Eyebrow>
           <h2
             style={{
