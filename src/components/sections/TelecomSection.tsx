@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TELECOM_AREAS, TELECOM_HERO_STATS } from '../../data/telecom';
 import { Eyebrow } from '../ui/Eyebrow';
+import { IntelligentTransformationFlow } from './IntelligentTransformationFlow';
 import { Radio, ShieldCheck, Layers, Cpu, Activity, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export const TelecomSection: React.FC = () => {
@@ -193,7 +194,7 @@ export const TelecomSection: React.FC = () => {
             })}
           </div>
 
-          {/* Right: Active Telecom Area Details */}
+          {/* Right: Active Telecom Area Details & Intelligent Transformation Flow */}
           <div
             style={{
               background: 'rgba(255, 255, 255, 0.03)',
@@ -206,6 +207,7 @@ export const TelecomSection: React.FC = () => {
             }}
           >
             <div>
+              {/* Active Badge */}
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--nf-red)' }} />
                 <span
@@ -221,20 +223,28 @@ export const TelecomSection: React.FC = () => {
                   {activeArea.badge}
                 </span>
               </div>
+
+              {/* Title & Story */}
               <h3
                 style={{
                   fontFamily: 'var(--font-display)',
                   fontSize: 'clamp(22px, 2.2vw, 32px)',
                   fontWeight: 800,
-                  margin: '4px 0 14px',
+                  margin: '4px 0 12px',
                   color: '#ffffff',
                 }}
               >
                 {activeArea.title}
               </h3>
-              <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.80)', lineHeight: 1.6, marginBottom: '24px' }}>
+              <p style={{ fontSize: '15px', color: 'rgba(255, 255, 255, 0.80)', lineHeight: 1.6, marginBottom: '20px' }}>
                 {activeArea.story}
               </p>
+
+              {/* Intelligent Transformation Flow: TELECOM → CLOUD → AI → AUTOMATION → DIGITAL */}
+              <IntelligentTransformationFlow
+                activeAreaId={activeAreaId}
+                onSelectArea={(newId) => setActiveAreaId(newId)}
+              />
 
               {/* Capabilities checklist */}
               <div style={{ marginBottom: '28px' }}>
