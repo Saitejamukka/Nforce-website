@@ -148,9 +148,6 @@ button:active, a:active {
   object-fit: cover;
   object-position: center 38%;
   display: block;
-  image-rendering: -webkit-optimize-contrast;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .nf-hero-readability-grad {
