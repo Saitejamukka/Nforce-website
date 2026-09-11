@@ -307,24 +307,15 @@ export const TelecomSection: React.FC = () => {
 
               <a
                 href="#contact"
+                className="nf-btn-primary"
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '12px 20px',
-                  background: 'var(--nf-red)',
-                  color: '#ffffff',
-                  borderRadius: 'var(--radius-pill)',
-                  textDecoration: 'none',
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 700,
+                  padding: '12px 22px',
                   fontSize: '13px',
-                  boxShadow: '0 4px 18px rgba(224, 31, 38, 0.45)',
-                  transition: 'background 200ms ease',
                 }}
               >
                 Discuss Telecom Transformation <ArrowRight size={14} />
               </a>
+
             </div>
           </div>
         </div>

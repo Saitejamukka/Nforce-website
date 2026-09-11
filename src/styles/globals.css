@@ -33,6 +33,35 @@ button:active, a:active {
   transform: scale(0.97);
 }
 
+.nf-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--nf-red) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(224, 31, 38, 0.3);
+  transition: background 200ms ease, transform 160ms ease, box-shadow 200ms ease;
+}
+
+.nf-btn-primary:hover {
+  background: var(--nf-red-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(224, 31, 38, 0.45);
+  transform: translateY(-1px);
+}
+
+.nf-btn-primary:active {
+  background: var(--nf-red-700) !important;
+  transform: translateY(0);
+}
+
 ::selection {
   background: var(--nf-red);
   color: #ffffff;

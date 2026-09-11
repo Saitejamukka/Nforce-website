@@ -2,6 +2,7 @@
   /* ===== Base palette ===== */
   /* Brand red — the "1" and accent words */
   --nf-red: #E01F26;
+  --nf-red-hover: #C21319;
   --nf-red-bright: #F0242B;
   --nf-red-600: #C21319;
   --nf-red-700: #9F1216;

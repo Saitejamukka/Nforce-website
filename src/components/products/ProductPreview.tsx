@@ -249,23 +249,11 @@ export const ProductPreview: React.FC<Props> = ({
                 <a
                   href="#contact"
                   onClick={onClose}
+                  className="nf-btn-primary"
                   style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    padding: '10px 20px',
-                    background: 'var(--nf-red)',
-                    color: '#ffffff',
-                    borderRadius: 'var(--radius-pill)',
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 700,
+                    padding: '10px 22px',
                     fontSize: '13.5px',
-                    textDecoration: 'none',
-                    boxShadow: '0 4px 14px rgba(224, 31, 38, 0.3)',
-                    transition: 'background 200ms ease',
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--nf-red-hover)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--nf-red)')}
                 >
                   Request Platform Demo <ArrowRight size={14} />
                 </a>

@@ -142,24 +142,11 @@ export const OutcomeStory: React.FC<Props> = ({
         <button
           type="button"
           onClick={onReadCaseStudy}
+          className="nf-btn-primary"
           style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '13px 24px',
-            background: 'var(--nf-red)',
-            color: '#ffffff',
-            borderRadius: 'var(--radius-pill)',
-            border: 'none',
-            fontFamily: 'var(--font-display)',
-            fontWeight: 700,
+            padding: '13px 26px',
             fontSize: '14px',
-            cursor: 'pointer',
-            boxShadow: '0 4px 16px rgba(224, 31, 38, 0.3)',
-            transition: 'background 200ms ease, transform 160ms ease',
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--nf-red-hover)')}
-          onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--nf-red)')}
         >
           Read Case Study <ArrowRight size={15} />
         </button>

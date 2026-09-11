@@ -498,23 +498,11 @@ export const CaseStudiesSection: React.FC = () => {
                 <a
                   href="#contact"
                   onClick={() => setIsModalOpen(false)}
+                  className="nf-btn-primary"
                   style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '8px',
                     padding: '12px 24px',
-                    background: 'var(--nf-red)',
-                    color: '#ffffff',
-                    borderRadius: 'var(--radius-pill)',
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 700,
                     fontSize: '14px',
-                    textDecoration: 'none',
-                    boxShadow: '0 4px 14px rgba(224, 31, 38, 0.3)',
-                    transition: 'background 200ms ease',
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--nf-red-hover)')}
-                  onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--nf-red)')}
                 >
                   Discuss Similar Transformation <ArrowRight size={15} />
                 </a>

@@ -523,26 +523,13 @@ export const CapabilitiesSection: React.FC = () => {
                     {isSelected ? (
                       <a
                         href="#contact"
+                        className="nf-btn-primary"
                         style={{
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          gap: '8px',
                           width: '100%',
                           padding: '12px 18px',
-                          background: 'var(--nf-red)',
-                          color: '#ffffff',
-                          borderRadius: 'var(--radius-pill)',
-                          textDecoration: 'none',
-                          fontFamily: 'var(--font-display)',
-                          fontWeight: 700,
                           fontSize: '13px',
                           letterSpacing: '0.01em',
-                          boxShadow: '0 4px 16px rgba(224, 31, 38, 0.35)',
-                          transition: 'background 200ms ease, transform 160ms ease',
                         }}
-                        onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--nf-red-hover)')}
-                        onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--nf-red)')}
                       >
                         Explore this capability <ArrowRight size={14} />
                       </a>
