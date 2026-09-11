@@ -55,11 +55,11 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
         background: isScrolled
           ? 'rgba(10, 10, 11, 0.88)'
           : 'linear-gradient(180deg, rgba(10, 10, 11, 0.80) 0%, rgba(10, 10, 11, 0.35) 60%, transparent 100%)',
-        backdropFilter: isScrolled ? 'blur(16px)' : 'blur(4px)',
-        WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'blur(4px)',
-        borderBottom: isScrolled ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid transparent',
+        backdropFilter: isScrolled ? 'blur(16px)' : 'none',
+        WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'none',
+        borderBottom: 'none',
         boxShadow: isScrolled ? '0 10px 30px -10px rgba(0, 0, 0, 0.5)' : 'none',
-        transition: 'background 300ms var(--ease-out), border-color 300ms, box-shadow 300ms, padding 300ms',
+        transition: 'background 300ms var(--ease-out), box-shadow 300ms, padding 300ms',
       }}
     >
       <div
