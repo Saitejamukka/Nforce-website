@@ -1,0 +1,88 @@
+import { EngagementModelItem } from '../types';
+
+export const ENGAGEMENT_MODELS: EngagementModelItem[] = [
+  {
+    id: 'onshore',
+    name: 'Onshore Delivery',
+    tagline: 'US-Based Technical Leadership & Client-Facing Architects',
+    icon: 'MapPin',
+    deliveryFocus: 'Local architects, engineering leads, and QA strategists operating in your timezone for real-time collaboration and onsite governance.',
+    bestFor: 'Strategic architecture, discovery sprints, executive stakeholder alignment, and high-security defense/gov compliance.',
+    keyBenefits: [
+      'Same-timezone real-time collaboration',
+      'Onsite sprint planning & architecture reviews',
+      'Direct executive & regulatory oversight',
+      'High-security clearance capability',
+    ],
+  },
+  {
+    id: 'offshore',
+    name: 'Offshore Scale',
+    tagline: 'India-Based High-Velocity Engineering & Delivery Hubs',
+    icon: 'Globe',
+    deliveryFocus: 'Dedicated offshore engineering squads delivering massive execution velocity, 24/7 continuous QA cycles, and cost-efficient scalability.',
+    bestFor: 'Large-scale test automation suites, microservices development, data engineering pipelines, and round-the-clock regression runs.',
+    keyBenefits: [
+      'Maximum cost efficiency and resource scalability',
+      'Overnight build verification & continuous test runs',
+      'Deep technical specialization across AI, Pega & Cloud',
+      'Rapid ramp-up of pre-vetted senior engineers',
+    ],
+  },
+  {
+    id: 'hybrid',
+    name: 'Hybrid Delivery (Follow-the-Sun)',
+    tagline: 'Best of Both Worlds: US Leadership + India Velocity',
+    icon: 'Sun',
+    deliveryFocus: 'Our premier model combining US technical program management with scalable offshore engineering squads for true 24-hour continuous delivery.',
+    bestFor: 'Fast-moving enterprise products, mission-critical telecom transformations, and continuous CI/CD release cycles.',
+    keyBenefits: [
+      'Continuous 24-hour engineering lifecycle',
+      'Seamless communication via US-based technical lead',
+      'Optimized blended rate maximizing ROI',
+      'Zero single-point-of-failure redundancy',
+    ],
+  },
+  {
+    id: 'managed-delivery',
+    name: 'Managed Delivery',
+    tagline: 'Outcome-Based Ownership with Strict SLA Accountability',
+    icon: 'ShieldCheck',
+    deliveryFocus: 'NForce One assumes complete end-to-end ownership of the delivery function, meeting guaranteed service levels, quality metrics, and roadmap milestones.',
+    bestFor: 'Enterprise QA centers of excellence (TCoE), continuous application support, and multi-year platform maintenance.',
+    keyBenefits: [
+      'Guaranteed SLAs and defect leak-rate commitments',
+      'Autonomous squad management with zero overhead for your team',
+      'Transparent KPI, velocity, and quality dashboards',
+      'Predictable operational expenditure',
+    ],
+  },
+  {
+    id: 'project-sow',
+    name: 'Project / SOW',
+    tagline: 'Defined Scope, Clear Milestones & Fixed Deliverables',
+    icon: 'FileText',
+    deliveryFocus: 'Structured milestone-driven engagements with precise deliverables, acceptance criteria, timeline guarantees, and transparent budgeting.',
+    bestFor: 'Cloud migrations, initial AI/RAG proof-of-concepts, legacy modernization refactors, and compliance audits.',
+    keyBenefits: [
+      'Fixed-price or capped milestone commitments',
+      'Clearly defined scope boundaries and deliverables',
+      'Rigorous acceptance criteria before milestone sign-off',
+      'Low financial risk with predictable expenditure',
+    ],
+  },
+  {
+    id: 'staff-augmentation',
+    name: 'T&M / Staff Augmentation',
+    tagline: 'On-Demand Senior Specialists to Amplify Your Internal Squads',
+    icon: 'Users',
+    deliveryFocus: 'Embedding specialized senior talent — AI engineers, QA leads, Pega architects, and cloud specialists — directly into your agile squads.',
+    bestFor: 'Filling critical skill gaps, accelerating urgent sprint deadlines, and seasonal capacity spikes.',
+    keyBenefits: [
+      'Pre-vetted, day-one productive specialists',
+      'Flexible month-to-month role scaling',
+      'Seamless integration into your Jira / Git workflows',
+      'No recruitment overhead or long-term lock-in',
+    ],
+  },
+];

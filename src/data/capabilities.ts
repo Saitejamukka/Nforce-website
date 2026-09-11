@@ -1,0 +1,143 @@
+import { Capability, StrategicPillar } from '../types';
+
+export const STRATEGIC_PILLARS: StrategicPillar[] = [
+  {
+    id: 'ai-agentic',
+    title: 'AI & Agentic Solutions',
+    subtitle: 'Autonomous Agents, Generative AI & Enterprise Cognitive Automation',
+    icon: 'BrainCircuit',
+    badge: 'Strategic Innovation',
+    desc: 'Empowering enterprises with autonomous AI agents, multi-model RAG architectures, conversational intelligence, and production-grade generative AI integrated directly into core workflows.',
+    offerings: [
+      'Autonomous Agentic AI Systems & Multi-Agent Workflows',
+      'Enterprise Generative AI & LLM Fine-Tuning',
+      'RAG Knowledge Solutions & Vector Retrieval Pipelines',
+      'Intelligent Automation & Cognitive RPA',
+      'Conversational AI & Enterprise Voice Concierges',
+      'Voice AI & IVR Speech Interaction Systems',
+      'AI-Enabled Business Process Optimization',
+      'Full-Stack AI Application Development & Deployment',
+    ],
+    technologies: ['LangChain', 'LlamaIndex', 'Claude / GPT-4o', 'vLLM', 'Pinecone', 'Python', 'FastAPI'],
+    outcomes: [
+      '70% reduction in repetitive workflow cycle times',
+      'Self-healing automation pipelines with human-in-the-loop controls',
+      'Enterprise-grade security, data privacy, and zero data leakage',
+    ],
+  },
+  {
+    id: 'quality-engineering',
+    title: 'Quality Engineering & AI Assurance',
+    subtitle: 'Zero-Defect Release Velocity, Agentic QA & LLM Trust Benchmarks',
+    icon: 'ShieldCheck',
+    badge: 'Heritage Core',
+    desc: 'From high-speed automated testing pipelines to cutting-edge AI model evaluation, hallucination detection, prompt regression, and IVR voice validation — built to guarantee mission-critical reliability.',
+    offerings: [
+      'Functional & Continuous End-to-End Automation Testing',
+      'High-Throughput API & Microservices Verification',
+      'Performance, Load, Resilience & Chaos Engineering',
+      'AI & Agentic System Testing & Guardrail Verification',
+      'LLM Evaluation, Benchmarking & Safety Testing',
+      'RAG Accuracy, Context Drift & Hallucination Auditing',
+      'Prompt Regression Testing & Token Cost Governance',
+      'Telecom Voice AI & Automated IVR Call Flow Validation',
+      'AI Model Security, Bias & Adversarial Robustness Testing',
+    ],
+    technologies: ['Playwright', 'Cypress', 'Selenium', 'JMeter / k6', 'DeepEval', 'Ragas', 'QForce AI', 'Postman'],
+    outcomes: [
+      '99.98% release accuracy across distributed architectures',
+      '4x acceleration in deployment cycles with automated test gates',
+      'Strict compliance with enterprise AI safety and reliability standards',
+    ],
+  },
+  {
+    id: 'digital-engineering',
+    title: 'Digital Engineering',
+    subtitle: 'Cloud-Native Architectures, Modern Applications & Product Delivery',
+    icon: 'Boxes',
+    badge: 'Enterprise Delivery',
+    desc: 'Engineering scalable, resilient, modern web, mobile, and microservices software. We turn complex business requirements into high-velocity digital products with follow-the-sun squads.',
+    offerings: [
+      'Full-Lifecycle Cloud-Native Application Development',
+      'Legacy Application Modernization & Monolith Decomposition',
+      'Responsive Web & High-Performance Mobile Applications',
+      'Event-Driven Microservices & Secure API Architecture',
+      'Enterprise Platform Engineering & Internal Developer Portals',
+      'End-to-End Product Engineering from Discovery to Scale',
+      '24/7 Follow-the-Sun Mission-Critical Application Support',
+    ],
+    technologies: ['React / Next.js', 'Node.js', 'TypeScript', 'Go', 'Java / Spring', 'Swift / Kotlin', 'GraphQL'],
+    outcomes: [
+      '3x faster time-to-market for enterprise digital products',
+      'Modern microservices decoupling that scales to millions of users',
+      'Clean architectural foundations with strict CI/CD discipline',
+    ],
+  },
+  {
+    id: 'data-cloud-platforms',
+    title: 'Data, Cloud & Enterprise Platforms',
+    subtitle: 'Multi-Cloud Optimization, Streaming Pipelines & Pega/SAP Excellence',
+    icon: 'Cloud',
+    badge: 'Scale & Operations',
+    desc: 'Modernizing enterprise infrastructure across AWS, Azure, and GCP while orchestrating big data pipelines, DevOps automation, and specialized Pega BPM / SAP enterprise core transformations.',
+    offerings: [
+      'Modern Data Engineering, Lakes & Real-Time Streaming',
+      'Enterprise Cloud Migration & Hybrid Multi-Cloud Strategy',
+      'Hyperscaler Architecture Tuning (AWS, Microsoft Azure, GCP)',
+      'Enterprise DevOps, GitOps & Infrastructure as Code (IaC)',
+      'Telemetry, Observability & Proactive SRE Operations',
+      'Complex Enterprise Integration & API Gateways',
+      'Pega Infinity BPM Development, Upgrade & Testing',
+      'SAP S/4HANA Transformation & Process Integration',
+    ],
+    technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Snowflake', 'Kafka', 'Pega', 'SAP'],
+    outcomes: [
+      'Up to 35% reduction in cloud infrastructure OPEX',
+      'Zero-downtime migrations with automated rollback safeguards',
+      'End-to-end operational visibility across hybrid topologies',
+    ],
+  },
+];
+
+export const CAPABILITIES: Capability[] = [
+  {
+    title: 'AI & Agentic Systems',
+    icon: 'BrainCircuit',
+    desc: 'Autonomous multi-agent workflows, enterprise RAG, and LLM fine-tuning for production.',
+  },
+  {
+    title: 'Continuous Quality Assurance',
+    icon: 'ShieldCheck',
+    desc: 'Full-stack automation, API resilience, load testing, and AI hallucination detection.',
+  },
+  {
+    title: 'Cloud-Native Engineering',
+    icon: 'Boxes',
+    desc: 'Resilient microservices, modern React/Node applications, and distributed API backends.',
+  },
+  {
+    title: 'Multi-Cloud & DevOps (AWS/GCP/Azure)',
+    icon: 'Cloud',
+    desc: 'Terraform IaC, Kubernetes orchestration, and automated GitOps CI/CD delivery pipelines.',
+  },
+  {
+    title: 'Telecom & OSS/BSS Systems',
+    icon: 'Radio',
+    desc: 'Order management, billing validation, IVR voice testing, and network field-ops automation.',
+  },
+  {
+    title: 'Enterprise Pega & SAP Systems',
+    icon: 'Workflow',
+    desc: 'Certified Pega BPM workflow automation, CRM modernization, and SAP core transformation.',
+  },
+  {
+    title: 'Real-Time Data Pipelines',
+    icon: 'Activity',
+    desc: 'Kafka event streaming, Snowflake warehousing, and predictive analytics dashboards.',
+  },
+  {
+    title: 'Security & Compliance Automation',
+    icon: 'Settings2',
+    desc: 'Automated vulnerability gates, secret governance, and continuous SOC2/HIPAA compliance.',
+  },
+];
