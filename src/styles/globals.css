@@ -320,6 +320,11 @@ button:active, a:active {
   box-shadow: 0 0 8px rgba(224, 31, 38, 0.8) !important;
 }
 
+.nf-marquee-track {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
 .nf-marquee-track:hover {
   animation-play-state: paused !important;
 }

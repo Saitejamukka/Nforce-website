@@ -1,29 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export const ScrollProgress: React.FC = () => {
-  const [scrollPct, setScrollPct] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const doc = document.documentElement;
-      const max = doc.scrollHeight - doc.clientHeight;
-      setScrollPct(max > 0 ? (window.scrollY / max) * 100 : 0);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (barRef.current) {
+            const doc = document.documentElement;
+            const max = doc.scrollHeight - doc.clientHeight;
+            const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+            barRef.current.style.width = `${pct}%`;
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div
+      ref={barRef}
       style={{
         position: 'fixed',
         top: 0,
         left: 0,
         height: '2px',
         background: 'var(--nf-red)',
-        width: `${scrollPct}%`,
+        width: '0%',
         zIndex: 300,
-        transition: 'width 80ms linear',
+        pointerEvents: 'none',
+        transform: 'translateZ(0)',
       }}
     />
   );

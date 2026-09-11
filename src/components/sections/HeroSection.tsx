@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HERO_WORDS } from '../../data/codeSnippets';
 import { CTA } from '../ui/CTA';
 import heroBgTechSquad from '../../assets/background-variants/hero-v2-tech-squad-2160p.jpg';
+import heroBgTechSquadWebp from '../../assets/background-variants/hero-v2-tech-squad-2160p.webp';
 import { ArrowRight } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
@@ -49,15 +50,28 @@ export const HeroSection: React.FC = () => {
           pointerEvents: 'none',
         }}
       >
-        {/* 4K Tech Squad Background */}
-        <img
-          src={heroBgTechSquad}
-          alt="NForceOne Engineering Squad Floor"
-          className="nf-hero-globe-bg"
+        {/* 4K Tech Squad Background (WebP + Progressive JPG Fallback) */}
+        <picture
           style={{
-            objectPosition: 'center 38%',
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            display: 'block',
           }}
-        />
+        >
+          <source srcSet={heroBgTechSquadWebp} type="image/webp" />
+          <img
+            src={heroBgTechSquad}
+            alt="NForceOne Engineering Squad Floor"
+            className="nf-hero-globe-bg"
+            fetchPriority="high"
+            decoding="async"
+            style={{
+              objectPosition: 'center 38%',
+            }}
+          />
+        </picture>
 
         {/* Ultra-Fine Perspective Dot-Matrix Grid */}
         <div
