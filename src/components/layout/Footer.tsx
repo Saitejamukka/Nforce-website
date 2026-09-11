@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
               <img
                 src={logoOnBlack}
                 alt="NForceOne"
-                style={{ height: '32px', display: 'block' }}
+                style={{ height: '46px', width: 'auto', display: 'block' }}
               />
             </div>
             <p

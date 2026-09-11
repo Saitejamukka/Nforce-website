@@ -71,7 +71,7 @@ export const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose 
         <img
           src={logoOnBlack}
           alt="NForceOne"
-          style={{ height: '34px' }}
+          style={{ height: '54px', width: 'auto' }}
         />
         <button
           onClick={onClose}

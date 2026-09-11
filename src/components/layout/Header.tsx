@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
         style={{
           maxWidth: '1400px',
           margin: '0 auto',
-          padding: isScrolled ? '16px 32px' : '22px 32px',
+          padding: isScrolled ? '12px 32px' : '18px 32px',
           transition: 'padding 300ms var(--ease-out)',
           display: 'flex',
           alignItems: 'center',
@@ -77,7 +77,13 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
           <img
             src={logoOnBlack}
             alt="NForceOne"
-            style={{ height: '34px', width: 'auto' }}
+            style={{
+              height: isScrolled ? '46px' : 'clamp(44px, 4.2vw, 56px)',
+              width: 'auto',
+              maxHeight: '58px',
+              display: 'block',
+              transition: 'height 300ms var(--ease-out)',
+            }}
           />
         </a>
 
