@@ -50,6 +50,7 @@ export const ProductPreview: React.FC<Props> = ({
     >
       {/* Backdrop */}
       <div
+        aria-hidden="true"
         onClick={onClose}
         style={{
           position: 'absolute',

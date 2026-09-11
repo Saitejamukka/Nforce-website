@@ -475,9 +475,19 @@ export const ChatWidget: React.FC = () => {
       {/* Proactive Floating Teaser Bubble */}
       {showTeaser && !isOpen && (
         <div
+          role="button"
+          tabIndex={0}
+          aria-label="Open chat assistant"
           onClick={() => {
             setShowTeaser(false);
             setIsOpen(true);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              setShowTeaser(false);
+              setIsOpen(true);
+            }
           }}
           style={{
             position: 'fixed',

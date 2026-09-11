@@ -77,6 +77,8 @@ export const CareersSection: React.FC = () => {
           <img
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
             alt="NForce One Engineering Team Collaboration"
+            loading="lazy"
+            decoding="async"
             style={{
               width: '100%',
               height: '100%',

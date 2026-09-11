@@ -223,7 +223,7 @@ export const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose 
             {SOLUTIONS.map((s) => (
               <a
                 key={s.key}
-                href="#solutions"
+                href="#capabilities"
                 onClick={onClose}
                 className="nf-menu-service-pill"
                 style={{

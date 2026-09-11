@@ -354,6 +354,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <input
                     placeholder="First name"
+                    aria-label="First name"
                     value={form.firstName}
                     onChange={(e) => setForm({ ...form, firstName: e.target.value })}
                     className="nf-form-input"
@@ -368,6 +369,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <input
                     placeholder="Last name"
+                    aria-label="Last name"
                     value={form.lastName}
                     onChange={(e) => setForm({ ...form, lastName: e.target.value })}
                     className="nf-form-input"
@@ -384,6 +386,7 @@ export const ContactSection: React.FC = () => {
               <div style={{ marginBottom: '14px' }}>
                 <input
                   placeholder="Company / Organization"
+                  aria-label="Company or Organization"
                   value={form.company}
                   onChange={(e) => setForm({ ...form, company: e.target.value })}
                   className="nf-form-input"
@@ -408,6 +411,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <input
                     placeholder="Company email"
+                    aria-label="Company email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="nf-form-input"
@@ -422,6 +426,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <input
                     placeholder="Phone"
+                    aria-label="Phone number"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     className="nf-form-input"
@@ -433,6 +438,7 @@ export const ContactSection: React.FC = () => {
               <div style={{ marginBottom: '18px' }}>
                 <textarea
                   placeholder="Message"
+                  aria-label="Message"
                   rows={4}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -518,7 +524,7 @@ export const ContactSection: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
             gap: '24px',
           }}
         >

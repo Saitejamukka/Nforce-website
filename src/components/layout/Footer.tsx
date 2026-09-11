@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
               <a href="#top" style={{ color: 'var(--nf-ink-700)', textDecoration: 'none' }}>
                 Home
               </a>
-              <a href="#solutions" style={{ color: 'var(--nf-ink-700)', textDecoration: 'none' }}>
+              <a href="#capabilities" style={{ color: 'var(--nf-ink-700)', textDecoration: 'none' }}>
                 Services
               </a>
               <a href="#about" style={{ color: 'var(--nf-ink-700)', textDecoration: 'none' }}>

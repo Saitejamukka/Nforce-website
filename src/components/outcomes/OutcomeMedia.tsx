@@ -31,6 +31,8 @@ export const OutcomeMedia: React.FC<Props> = ({
       <img
         src={imageUrl}
         alt={altText}
+        loading="lazy"
+        decoding="async"
         onLoad={() => setIsLoaded(true)}
         style={{
           width: '100%',

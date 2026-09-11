@@ -145,7 +145,7 @@ export const ProductsSection: React.FC = () => {
           </p>
 
           <a
-            href="#solutions"
+            href="#capabilities"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -160,7 +160,7 @@ export const ProductsSection: React.FC = () => {
             onMouseEnter={(e) => (e.currentTarget.style.gap = '10px')}
             onMouseLeave={(e) => (e.currentTarget.style.gap = '6px')}
           >
-            Explore our solutions <ArrowRight size={16} />
+            Explore our capabilities <ArrowRight size={16} />
           </a>
         </div>
 

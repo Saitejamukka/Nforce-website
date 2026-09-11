@@ -334,6 +334,8 @@ export const TelecomSection: React.FC = () => {
           <img
             src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80"
             alt="Tier-1 Enterprise Telecom Datacenter & Fiber Core"
+            loading="lazy"
+            decoding="async"
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', inset: 0, filter: 'brightness(0.45)' }}
           />
           <div

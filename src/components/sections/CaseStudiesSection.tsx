@@ -295,6 +295,7 @@ export const CaseStudiesSection: React.FC = () => {
         >
           {/* Backdrop */}
           <div
+            aria-hidden="true"
             onClick={() => setIsModalOpen(false)}
             style={{
               position: 'absolute',
