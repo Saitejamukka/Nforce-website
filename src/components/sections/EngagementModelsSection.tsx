@@ -1,188 +1,130 @@
-import React from 'react';
-import { ENGAGEMENT_MODELS } from '../../data/engagementModels';
+import React, { useState } from 'react';
 import { Eyebrow } from '../ui/Eyebrow';
-import { MapPin, Globe, Sun, ShieldCheck, FileText, Users, CheckCircle2, ArrowRight } from 'lucide-react';
+import { EngagementProgress, ClientNeedId } from '../engagement/EngagementProgress';
+import { EngagementSelector } from '../engagement/EngagementSelector';
+import { EngagementPath } from '../engagement/EngagementPath';
+import { DeliveryModel } from '../engagement/DeliveryModel';
+import { HelpCircle, ArrowRight } from 'lucide-react';
 
 export const EngagementModelsSection: React.FC = () => {
-  const getModelIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'MapPin':
-        return <MapPin size={22} color="var(--nf-red)" />;
-      case 'Globe':
-        return <Globe size={22} color="var(--nf-red)" />;
-      case 'Sun':
-        return <Sun size={22} color="var(--nf-red)" />;
-      case 'ShieldCheck':
-        return <ShieldCheck size={22} color="var(--nf-red)" />;
-      case 'FileText':
-        return <FileText size={22} color="var(--nf-red)" />;
-      case 'Users':
-      default:
-        return <Users size={22} color="var(--nf-red)" />;
-    }
-  };
+  const [activeNeed, setActiveNeed] = useState<ClientNeedId>('own-outcome');
 
   return (
     <section
       id="engagement"
       style={{
-        background: '#09090b',
-        color: '#ffffff',
-        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-        padding: '130px 32px 110px',
+        background: '#FFFFFF',
+        color: '#0F172A',
+        borderTop: '1px solid #EDF0F3',
+        borderBottom: '1px solid #EDF0F3',
+        padding: '110px 32px 100px',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
       <div style={{ maxWidth: '1400px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
         {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 64px' }}>
+        <div style={{ textAlign: 'center', maxWidth: '840px', margin: '0 auto 48px' }}>
           <Eyebrow>Flexible Commercial & Delivery Architecture</Eyebrow>
           <h2
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(32px, 4vw, 54px)',
+              fontSize: 'clamp(32px, 4vw, 52px)',
               fontWeight: 800,
               letterSpacing: '-0.02em',
               margin: '16px 0 18px',
-              lineHeight: 1.12,
+              lineHeight: 1.15,
+              color: '#0F172A',
             }}
           >
-            How We Engage: <br />
-            <span style={{ color: 'var(--nf-red)' }}>Precision Delivery for Every Stage.</span>
+            How We Engage.{' '}
+            <span style={{ color: 'var(--nf-red)' }}>Built Around Your Needs.</span>
           </h2>
-          <p style={{ fontSize: '16px', color: 'rgba(255, 255, 255, 0.75)', lineHeight: 1.6, margin: 0 }}>
-            Whether you need a full-ownership Managed Delivery team, a specialized hybrid squad for 24/7
-            follow-the-sun acceleration, or targeted staff augmentation, we adapt to your governance model.
+          <p
+            style={{
+              fontSize: '16px',
+              color: '#475569',
+              lineHeight: 1.65,
+              margin: 0,
+            }}
+          >
+            First-time visitors and enterprise buyers don’t need complex delivery jargon.
+            Select what your initiative requires, and discover how NForce One structures
+            ownership, velocity, and commercial accountability.
           </p>
         </div>
 
-        {/* 6 Models Grid */}
+        {/* Step / Breadcrumb Progress */}
+        <EngagementProgress activeNeed={activeNeed} onSelectNeed={setActiveNeed} />
+
+        {/* 3 Primary Client Needs Selector */}
+        <EngagementSelector activeNeed={activeNeed} onSelectNeed={setActiveNeed} />
+
+        {/* Strategic Alignment Pipeline Visual */}
+        <EngagementPath activeNeed={activeNeed} />
+
+        {/* Dynamic Revealed Models Container */}
+        <DeliveryModel activeNeed={activeNeed} />
+
+        {/* Reassuring Advisory Bottom Strip */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
-            gap: '24px',
-            marginBottom: '48px',
+            marginTop: '56px',
+            padding: '24px 30px',
+            background: '#F8FAFC',
+            border: '1px solid #E2E8F0',
+            borderRadius: '16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '20px',
+            flexWrap: 'wrap',
           }}
         >
-          {ENGAGEMENT_MODELS.map((model) => (
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             <div
-              key={model.id}
               style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.10)',
-                borderRadius: '18px',
-                padding: '32px',
+                width: '40px',
+                height: '40px',
+                borderRadius: '10px',
+                background: '#FFFFFF',
+                border: '1px solid #CBD5E1',
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                backdropFilter: 'blur(16px)',
-                transition: 'all 240ms var(--ease-out)',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(224, 31, 38, 0.45)';
-                e.currentTarget.style.transform = 'translateY(-4px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.10)';
-                e.currentTarget.style.transform = 'none';
+                alignItems: 'center',
+                justifyContent: 'center',
+                flexShrink: 0,
               }}
             >
-              <div>
-                {/* Header Icon + Name */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
-                  <div
-                    style={{
-                      width: '44px',
-                      height: '44px',
-                      borderRadius: '12px',
-                      background: 'rgba(224, 31, 38, 0.12)',
-                      border: '1px solid rgba(224, 31, 38, 0.25)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    {getModelIcon(model.icon)}
-                  </div>
-                  <div>
-                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', fontWeight: 800, margin: 0 }}>
-                      {model.name}
-                    </h3>
-                  </div>
-                </div>
-
-                <div style={{ fontSize: '13px', color: 'var(--nf-red-bright)', fontWeight: 600, marginBottom: '14px' }}>
-                  {model.tagline}
-                </div>
-
-                <p style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.75)', lineHeight: 1.6, marginBottom: '18px' }}>
-                  {model.deliveryFocus}
-                </p>
-
-                {/* Best For Tag */}
-                <div
-                  style={{
-                    padding: '10px 12px',
-                    borderRadius: '8px',
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
-                    marginBottom: '20px',
-                    fontSize: '12px',
-                    color: 'rgba(255, 255, 255, 0.85)',
-                  }}
-                >
-                  <strong style={{ color: '#ffffff' }}>Best for: </strong>
-                  {model.bestFor}
-                </div>
-
-                {/* Key Benefits Checklist */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
-                  {model.keyBenefits.map((benefit, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                      <CheckCircle2 size={14} color="var(--nf-red)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                      <span style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.4 }}>
-                        {benefit}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <a
-                href="#contact"
+              <HelpCircle size={20} color="var(--nf-red)" />
+            </div>
+            <div>
+              <div
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  width: '100%',
-                  padding: '12px',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.06)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  color: '#ffffff',
-                  textDecoration: 'none',
-                  fontSize: '13px',
                   fontFamily: 'var(--font-display)',
+                  fontSize: '14.5px',
                   fontWeight: 700,
-                  transition: 'background 200ms ease',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'var(--nf-red)';
-                  e.currentTarget.style.borderColor = 'var(--nf-red)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+                  color: '#0F172A',
                 }}
               >
-                Inquire About {model.name} <ArrowRight size={14} />
-              </a>
+                Unsure which model fits your roadmap?
+              </div>
+              <div style={{ fontSize: '13px', color: '#64748B', marginTop: '2px' }}>
+                Our enterprise delivery architects will review your requirements, timelines, and compliance needs to design a custom hybrid engagement.
+              </div>
             </div>
-          ))}
+          </div>
+
+          <a
+            href="#contact"
+            className="nf-btn-primary"
+            style={{
+              padding: '11px 22px',
+              fontSize: '13.5px',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            Speak with a Delivery Architect <ArrowRight size={14} />
+          </a>
         </div>
       </div>
     </section>
