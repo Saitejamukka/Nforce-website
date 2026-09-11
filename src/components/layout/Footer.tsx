@@ -1,5 +1,5 @@
 import React from 'react';
-import logoOnBlack from '../../assets/nf1-logo-on-black.png';
+import logoCircle from '../../assets/nf1-logo-circle.png';
 
 export const Footer: React.FC = () => {
   return (
@@ -23,16 +23,20 @@ export const Footer: React.FC = () => {
           <div>
             <div
               style={{
-                background: 'var(--nf-black)',
                 display: 'inline-block',
-                padding: '12px 16px',
                 marginBottom: '18px',
               }}
             >
               <img
-                src={logoOnBlack}
+                src={logoCircle}
                 alt="NForceOne"
-                style={{ height: '46px', width: 'auto', display: 'block' }}
+                style={{
+                  height: '52px',
+                  width: '52px',
+                  borderRadius: '50%',
+                  display: 'block',
+                  boxShadow: '0 2px 12px rgba(0, 0, 0, 0.45)',
+                }}
               />
             </div>
             <p

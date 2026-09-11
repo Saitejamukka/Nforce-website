@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CTA } from '../ui/CTA';
-import logoOnBlack from '../../assets/nf1-logo-on-black.png';
+import logoCircle from '../../assets/nf1-logo-circle.png';
 
 interface HeaderProps {
   onToggleMenu: () => void;
@@ -75,14 +75,15 @@ export const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
       >
         <a href="#top" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <img
-            src={logoOnBlack}
+            src={logoCircle}
             alt="NForceOne"
             style={{
-              height: isScrolled ? '46px' : 'clamp(44px, 4.2vw, 56px)',
-              width: 'auto',
-              maxHeight: '58px',
+              height: isScrolled ? '46px' : 'clamp(46px, 4.4vw, 56px)',
+              width: isScrolled ? '46px' : 'clamp(46px, 4.4vw, 56px)',
+              borderRadius: '50%',
               display: 'block',
-              transition: 'height 300ms var(--ease-out)',
+              transition: 'all 300ms var(--ease-out)',
+              boxShadow: '0 2px 12px rgba(0, 0, 0, 0.45)',
             }}
           />
         </a>

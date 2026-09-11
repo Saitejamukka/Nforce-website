@@ -1,7 +1,7 @@
 import React from 'react';
 import { MENU_LINKS } from '../../data/companyData';
 import { SOLUTIONS } from '../../data/solutions';
-import logoOnBlack from '../../assets/nf1-logo-on-black.png';
+import logoCircle from '../../assets/nf1-logo-circle.png';
 
 interface FullscreenMenuProps {
   isOpen: boolean;
@@ -69,9 +69,15 @@ export const FullscreenMenu: React.FC<FullscreenMenuProps> = ({ isOpen, onClose 
         }}
       >
         <img
-          src={logoOnBlack}
+          src={logoCircle}
           alt="NForceOne"
-          style={{ height: '54px', width: 'auto' }}
+          style={{
+            height: '54px',
+            width: '54px',
+            borderRadius: '50%',
+            display: 'block',
+            boxShadow: '0 2px 12px rgba(0, 0, 0, 0.45)',
+          }}
         />
         <button
           onClick={onClose}
