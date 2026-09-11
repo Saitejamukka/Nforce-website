@@ -156,7 +156,7 @@ button:active, a:active {
 .nf-hero-readability-grad {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(10, 10, 11, 0.96) 0%, rgba(10, 10, 11, 0.84) 42%, rgba(10, 10, 11, 0.24) 68%, transparent 88%);
+  background: linear-gradient(90deg, rgba(10, 10, 11, 0.82) 0%, rgba(10, 10, 11, 0.65) 32%, rgba(10, 10, 11, 0.20) 58%, rgba(10, 10, 11, 0.03) 78%, transparent 100%);
 }
 
 .nf-hero-grid {
@@ -187,7 +187,7 @@ button:active, a:active {
     object-position: center center !important;
   }
   .nf-hero-readability-grad {
-    background: linear-gradient(180deg, rgba(10, 10, 11, 0.92) 0%, rgba(10, 10, 11, 0.72) 48%, rgba(10, 10, 11, 0.96) 100%) !important;
+    background: linear-gradient(180deg, rgba(10, 10, 11, 0.82) 0%, rgba(10, 10, 11, 0.55) 50%, rgba(10, 10, 11, 0.88) 100%) !important;
   }
   .nf-ind-card {
     flex: 0 0 calc(25% - 12px);

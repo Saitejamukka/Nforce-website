@@ -93,7 +93,7 @@ export const HeroSection: React.FC = () => {
             position: 'absolute',
             inset: 0,
             background:
-              'linear-gradient(180deg, rgba(10, 10, 11, 0.75) 0%, transparent 20%, transparent 72%, rgba(10, 10, 11, 0.98) 100%)',
+              'linear-gradient(180deg, rgba(10, 10, 11, 0.45) 0%, transparent 15%, transparent 82%, rgba(10, 10, 11, 0.88) 100%)',
           }}
         />
       </div>
