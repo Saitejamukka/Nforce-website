@@ -56,7 +56,7 @@ const EDITORIAL_CASES: EditorialCaseStudy[] = [
     title: 'Cloud-Native Core Banking Modernization',
     description:
       'Engineered an event-driven microservices architecture on AWS and Kubernetes, modernizing 18 legacy monolithic services to sustain 45,000 transactions per second at sub-20ms latency.',
-    imageUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80',
     floatingMetricValue: '45,000+ TPS',
     floatingMetricLabel: 'Sub-20ms Latency',
     metrics: [
