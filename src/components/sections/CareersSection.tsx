@@ -63,6 +63,55 @@ export const CareersSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Strategic Team Culture Photography Banner */}
+        <div
+          style={{
+            position: 'relative',
+            borderRadius: '20px',
+            overflow: 'hidden',
+            minHeight: '260px',
+            marginBottom: '48px',
+            boxShadow: '0 12px 36px -10px rgba(0, 0, 0, 0.08)',
+          }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
+            alt="NForce One Engineering Team Collaboration"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              display: 'block',
+              position: 'absolute',
+              inset: 0,
+            }}
+          />
+          <div
+            style={{
+              position: 'relative',
+              zIndex: 2,
+              background: 'linear-gradient(90deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.55) 60%, transparent 100%)',
+              padding: '40px 44px',
+              color: '#FFFFFF',
+              maxWidth: '640px',
+              minHeight: '260px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--nf-red-bright)', marginBottom: '8px' }}>
+              Culture & Collaboration
+            </div>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 2.6vw, 34px)', fontWeight: 800, margin: '0 0 10px', lineHeight: 1.15 }}>
+              Where Elite Engineers Build Systems That Matter.
+            </h3>
+            <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.6, margin: 0 }}>
+              Join over 100 engineers and architects across Dallas and Hyderabad building the future of enterprise software, autonomous testing, and generative AI.
+            </p>
+          </div>
+        </div>
+
         {/* Culture / Values Cards */}
         <div
           className="nf-career-grid"

@@ -91,8 +91,8 @@ export const AboutSection: React.FC = () => {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
-            gap: '28px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '24px',
             marginBottom: '80px',
           }}
         >
@@ -103,7 +103,7 @@ export const AboutSection: React.FC = () => {
               borderRadius: '20px',
               overflow: 'hidden',
               minHeight: '340px',
-              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
+              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.08)',
             }}
           >
             <img
@@ -120,7 +120,7 @@ export const AboutSection: React.FC = () => {
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.82) 100%)',
+                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-end',
@@ -130,7 +130,7 @@ export const AboutSection: React.FC = () => {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
                 <MapPin size={16} color="var(--nf-red)" />
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11.5px', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   Dallas, Texas · United States
                 </span>
               </div>
@@ -150,7 +150,7 @@ export const AboutSection: React.FC = () => {
               borderRadius: '20px',
               overflow: 'hidden',
               minHeight: '340px',
-              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
+              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.08)',
             }}
           >
             <img
@@ -167,7 +167,7 @@ export const AboutSection: React.FC = () => {
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.82) 100%)',
+                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'flex-end',
@@ -177,7 +177,7 @@ export const AboutSection: React.FC = () => {
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
                 <Globe size={16} color="var(--nf-red)" />
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11.5px', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   Hyderabad · India
                 </span>
               </div>
@@ -185,7 +185,54 @@ export const AboutSection: React.FC = () => {
                 High-Velocity Engineering Center
               </h4>
               <p style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.5, margin: 0 }}>
-                24/7 follow-the-sun continuous test execution, microservices development, and AI innovation labs.
+                24/7 follow-the-sun continuous test execution, microservices development, and scalable squad delivery.
+              </p>
+            </div>
+          </div>
+
+          {/* Photo 3: Advanced AI & Platform Labs */}
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              minHeight: '340px',
+              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.08)',
+            }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80"
+              alt="NForce One Advanced AI & Quality Engineering Labs"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.85) 100%)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+                padding: '28px',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--nf-red)' }} />
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11.5px', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Innovation & Research Labs
+                </span>
+              </div>
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', fontWeight: 800, margin: '0 0 6px' }}>
+                AI & Quality Engineering CoE
+              </h4>
+              <p style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.5, margin: 0 }}>
+                Autonomous multi-agent testing harnesses, LLM evaluation pipelines, and chaos engineering simulations.
               </p>
             </div>
           </div>

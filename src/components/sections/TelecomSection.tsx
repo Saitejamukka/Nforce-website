@@ -319,6 +319,53 @@ export const TelecomSection: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* Enterprise Network Infrastructure Banner */}
+        <div
+          style={{
+            marginTop: '44px',
+            position: 'relative',
+            borderRadius: '16px',
+            overflow: 'hidden',
+            border: '1px solid rgba(255, 255, 255, 0.12)',
+            minHeight: '120px',
+          }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80"
+            alt="Tier-1 Enterprise Telecom Datacenter & Fiber Core"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', inset: 0, filter: 'brightness(0.45)' }}
+          />
+          <div
+            style={{
+              position: 'relative',
+              zIndex: 2,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '24px 32px',
+              background: 'linear-gradient(90deg, rgba(12, 12, 14, 0.88) 0%, rgba(12, 12, 14, 0.4) 100%)',
+              flexWrap: 'wrap',
+              gap: '16px',
+            }}
+          >
+            <div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--nf-red)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '4px' }}>
+                Enterprise Network Testing & Lab Validation
+              </div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 800, color: '#ffffff' }}>
+                Simulating 100M+ Daily Call Events, 5G Core Latency & OSS/BSS Billing Cycles
+              </div>
+            </div>
+            <a
+              href="#contact"
+              className="nf-btn-primary"
+              style={{ padding: '10px 20px', fontSize: '13px', whiteSpace: 'nowrap' }}
+            >
+              Discuss Telecom Infrastructure <ArrowRight size={14} />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
