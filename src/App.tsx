@@ -11,24 +11,17 @@ import { TelecomSection } from './components/sections/TelecomSection';
 import { ProductsSection } from './components/sections/ProductsSection';
 import { CaseStudiesSection } from './components/sections/CaseStudiesSection';
 import { EngagementModelsSection } from './components/sections/EngagementModelsSection';
-import { TestimonialsSection } from './components/sections/TestimonialsSection';
-import { AboutSection } from './components/sections/AboutSection';
-import { StatsStrip } from './components/sections/StatsStrip';
-import { SolutionsExplorer } from './components/sections/SolutionsExplorer';
-import { ServiceFinder } from './components/sections/ServiceFinder';
-import { IndustriesSection } from './components/sections/IndustriesSection';
 import { PartnersMarquee } from './components/sections/PartnersMarquee';
-import { CareersSection } from './components/sections/CareersSection';
+import { AboutSection } from './components/sections/AboutSection';
 import { ContactSection } from './components/sections/ContactSection';
-import { CtaBanner } from './components/sections/CtaBanner';
 import { FaqSection } from './components/sections/FaqSection';
 import { ChatWidget } from './components/sections/ChatWidget';
 
-export function App() {
+export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div style={{ minHeight: '100vh', background: 'var(--nf-gray-100)', color: 'var(--nf-ink-950)' }}>
+    <div style={{ minHeight: '100vh', background: '#FFFFFF', color: 'var(--nf-ink-950)' }}>
       {/* 2px Scroll Progress Bar */}
       <ScrollProgress />
 
@@ -38,58 +31,37 @@ export function App() {
       {/* Fullscreen Navigation Overlay */}
       <FullscreenMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
 
-      {/* 1. Hero Section (#top) */}
+      {/* Hero Benchmark (#top) */}
       <HeroSection />
 
-      {/* 2. 4 Strategic Capabilities Pillars (#capabilities) */}
+      {/* Chapter 1: WHAT WE DO -> Capabilities (#capabilities) */}
       <CapabilitiesSection />
 
-      {/* 3. Strategic Domain Differentiator: Telecom (#telecom) */}
+      {/* Strategic Domain Anchor: Telecom Infrastructure (#telecom) */}
       <TelecomSection />
 
-      {/* 4. Innovation & Products: 12 Proprietary Platforms (#products) */}
+      {/* Chapter 2: WHAT WE BUILD -> Products (#products) */}
       <ProductsSection />
 
-      {/* 5. Real Outcomes & Validated Case Studies (#outcomes) */}
+      {/* Chapter 3: WHAT WE ACHIEVE -> Real Outcomes (#outcomes) */}
       <CaseStudiesSection />
 
-      {/* 6. How We Engage: 6 Delivery & Governance Models (#engagement) */}
+      {/* Chapter 4: HOW WE ENGAGE -> 3 Editorial Paths (#engagement) */}
       <EngagementModelsSection />
 
-      {/* 7. Client Testimonials & Social Proof */}
-      <TestimonialsSection />
-
-      {/* 8. Editorial About Section (#about) */}
-      <AboutSection />
-
-      {/* 9. Stats Strip: Scale & Metrics */}
-      <StatsStrip />
-
-      {/* 10. Solutions Explorer (#solutions) */}
-      <SolutionsExplorer />
-
-      {/* 11. Service Finder Catalog */}
-      <ServiceFinder />
-
-      {/* 12. Industries Section (#industries) */}
-      <IndustriesSection />
-
-      {/* 13. Enterprise Partners Marquee */}
+      {/* Enterprise Trust: Client Marquee */}
       <PartnersMarquee />
 
-      {/* 14. Careers & Culture with Employee Voices (#careers) */}
-      <CareersSection />
+      {/* Who We Are: Strategic Photography & Culture (#about) */}
+      <AboutSection />
 
-      {/* 15. Enterprise Contact & Capability Consultation (#contact) */}
+      {/* Chapter 5: LET'S TALK -> Contact Consultation (#contact) */}
       <ContactSection />
 
-      {/* 16. High-Impact CTA Banner */}
-      <CtaBanner />
-
-      {/* 17. FAQ Section (#faq) */}
+      {/* Common Enterprise Questions (#faq) */}
       <FaqSection />
 
-      {/* 18. Footer */}
+      {/* Global Footer */}
       <Footer />
 
       {/* Floating Helpers */}
@@ -98,5 +70,3 @@ export function App() {
     </div>
   );
 }
-
-export default App;

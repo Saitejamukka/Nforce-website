@@ -1,180 +1,232 @@
-import React, { useState } from 'react';
-import { WHAT_WE_DO } from '../../data/whatWeDo';
-import { MILESTONES, CULTURAL_VALUES } from '../../data/companyData';
+import React from 'react';
 import { Eyebrow } from '../ui/Eyebrow';
-import { Highlight } from '../ui/Highlight';
-import { DynamicIcon } from '../ui/DynamicIcon';
+import { MILESTONES, CULTURAL_VALUES } from '../../data/companyData';
+import { MapPin, Globe } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
-  const [hoveredKey, setHoveredKey] = useState<string | null>(null);
-
   return (
     <section
       id="about"
       style={{
-        padding: '120px 32px 140px',
-        background: 'var(--nf-gray-100)',
+        padding: '120px 32px 110px',
+        background: '#FFFFFF',
+        color: '#0F172A',
+        borderTop: '1px solid #EDEDED',
+        borderBottom: '1px solid #EDEDED',
       }}
     >
-      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-        {/* Top Editorial Split Header */}
+      <div style={{ maxWidth: '1380px', margin: '0 auto' }}>
+        {/* Editorial Split Header */}
         <div
-          className="nf-about-grid"
           style={{
             display: 'grid',
-            gridTemplateColumns: '0.9fr 1.1fr',
-            gap: '64px',
-            marginBottom: '80px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+            gap: '48px',
+            alignItems: 'end',
+            marginBottom: '64px',
           }}
         >
           <div>
-            <Eyebrow>What We Do</Eyebrow>
-            <p
+            <Eyebrow>Who We Are</Eyebrow>
+            <h2
               style={{
-                color: 'var(--nf-gray-500)',
-                fontSize: '15px',
-                lineHeight: 1.65,
-                maxWidth: '360px',
-                margin: '20px 0 0',
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(36px, 4.4vw, 56px)',
+                fontWeight: 800,
+                letterSpacing: '-0.025em',
+                lineHeight: 1.12,
+                color: '#0F172A',
+                margin: '16px 0 0',
               }}
             >
-              From the first line of code to the last regression cycle, our teams embed directly
-              with yours — no handoffs, no black boxes.
+              Enterprise Engineering <br />
+              <span style={{ color: 'var(--nf-red)' }}>With a Human Foundation.</span>
+            </h2>
+          </div>
+
+          <div>
+            <p
+              style={{
+                fontSize: '17px',
+                color: '#475569',
+                lineHeight: 1.65,
+                margin: '0 0 24px',
+              }}
+            >
+              Headquartered in Dallas, Texas with world-class engineering centers in Hyderabad, India,
+              NForce One combines US strategic leadership with high-velocity global engineering hubs.
+              We build systems that scale without sacrificing craftsmanship or accountability.
             </p>
-            <div style={{ display: 'flex', gap: '28px', marginTop: '32px', flexWrap: 'wrap' }}>
+
+            <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
               <div>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 800 }}>
-                  4
-                </div>
-                <div style={{ fontSize: '12px', color: 'var(--nf-gray-500)', marginTop: '2px' }}>
-                  Core Disciplines
-                </div>
-              </div>
-              <div>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 800 }}>
-                  100+
-                </div>
-                <div style={{ fontSize: '12px', color: 'var(--nf-gray-500)', marginTop: '2px' }}>
-                  Team of Experts
-                </div>
-              </div>
-              <div>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '24px', fontWeight: 800 }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '28px', fontWeight: 800, color: 'var(--nf-red)' }}>
                   15+
                 </div>
-                <div style={{ fontSize: '12px', color: 'var(--nf-gray-500)', marginTop: '2px' }}>
+                <div style={{ fontSize: '12.5px', color: '#64748B', fontWeight: 600 }}>
                   Years Delivering
+                </div>
+              </div>
+              <div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '28px', fontWeight: 800, color: 'var(--nf-red)' }}>
+                  100+
+                </div>
+                <div style={{ fontSize: '12.5px', color: '#64748B', fontWeight: 600 }}>
+                  Senior Engineers
+                </div>
+              </div>
+              <div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '28px', fontWeight: 800, color: 'var(--nf-red)' }}>
+                  2
+                </div>
+                <div style={{ fontSize: '12.5px', color: '#64748B', fontWeight: 600 }}>
+                  Global Delivery Hubs
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <h2
+        {/* Strategic Photography & Dual-Shore Showcase */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))',
+            gap: '28px',
+            marginBottom: '80px',
+          }}
+        >
+          {/* Photo 1: US Leadership Hub */}
+          <div
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(30px, 4.2vw, 52px)',
-              fontWeight: 800,
-              lineHeight: 1.12,
-              margin: 0,
+              position: 'relative',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              minHeight: '340px',
+              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
             }}
           >
-            Engineering quality into every layer of the software you ship —{' '}
-            <Highlight tone="red">at enterprise scale</Highlight>.
-          </h2>
-        </div>
-
-        {/* 4 Core What We Do Rows */}
-        <div style={{ marginBottom: '96px' }}>
-          {WHAT_WE_DO.map((w) => {
-            const isHovered = hoveredKey === w.key;
-            return (
-              <div
-                key={w.key}
-                onMouseEnter={() => setHoveredKey(w.key)}
-                onMouseLeave={() => setHoveredKey(null)}
-                className="nf-wtd-row"
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '100px 1fr 1fr',
-                  alignItems: 'center',
-                  gap: '32px',
-                  padding: '34px 0',
-                  borderTop: '1px solid var(--border-light)',
-                  cursor: 'default',
-                }}
-              >
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: '15px', color: 'var(--nf-gray-500)' }}>
-                  0{w.n}
-                </div>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: 'clamp(22px, 2.6vw, 30px)',
-                    fontWeight: 700,
-                    transform: isHovered ? 'translateX(10px)' : 'translateX(0px)',
-                    transition: 'transform var(--dur-base) var(--ease-out), color var(--dur-base)',
-                    color: isHovered ? 'var(--nf-red)' : 'var(--nf-ink-950)',
-                  }}
-                >
-                  {w.title}
-                </div>
-                <div
-                  style={{
-                    color: 'var(--nf-gray-500)',
-                    fontSize: '15px',
-                    lineHeight: 1.6,
-                    maxWidth: '440px',
-                    justifySelf: 'end',
-                    textAlign: 'right',
-                  }}
-                >
-                  {w.desc}
-                </div>
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+              alt="NForce One North American Leadership Office"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.82) 100%)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+                padding: '28px',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                <MapPin size={16} color="var(--nf-red)" />
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Dallas, Texas · United States
+                </span>
               </div>
-            );
-          })}
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', fontWeight: 800, margin: '0 0 6px' }}>
+                Client Leadership & Architecture Hub
+              </h4>
+              <p style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.5, margin: 0 }}>
+                Onsite sprint leadership, enterprise governance, compliance auditing, and executive stakeholder alignment.
+              </p>
+            </div>
+          </div>
+
+          {/* Photo 2: Global Delivery Hub */}
+          <div
+            style={{
+              position: 'relative',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              minHeight: '340px',
+              boxShadow: '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
+            }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+              alt="NForce One Global Engineering Center"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.82) 100%)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+                padding: '28px',
+                color: '#FFFFFF',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                <Globe size={16} color="var(--nf-red)" />
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                  Hyderabad · India
+                </span>
+              </div>
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', fontWeight: 800, margin: '0 0 6px' }}>
+                High-Velocity Engineering Center
+              </h4>
+              <p style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.85)', lineHeight: 1.5, margin: 0 }}>
+                24/7 follow-the-sun continuous test execution, microservices development, and AI innovation labs.
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Official Client Milestones Showcase from nforceone.com */}
-        <div style={{ marginBottom: '96px' }}>
-          <div style={{ marginBottom: '40px' }}>
+        {/* Client Milestones */}
+        <div style={{ marginBottom: '80px' }}>
+          <div style={{ marginBottom: '32px' }}>
             <Eyebrow>Proven Track Record</Eyebrow>
             <h3
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(26px, 3.4vw, 40px)',
+                fontSize: 'clamp(26px, 3.2vw, 38px)',
                 fontWeight: 800,
-                letterSpacing: '-0.01em',
-                margin: '14px 0 0',
+                letterSpacing: '-0.015em',
+                color: '#0F172A',
+                margin: '12px 0 0',
               }}
             >
-              Everyone has a story. Here is ours.
+              Enterprise Transformations Delivered
             </h3>
-            <p style={{ color: 'var(--nf-gray-500)', fontSize: '15px', marginTop: '10px', maxWidth: '580px' }}>
-              Real outcomes from our client partnerships across enterprise AI, travel tech, and continuous QA.
-            </p>
           </div>
 
           <div
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '24px',
+              gap: '20px',
             }}
           >
             {MILESTONES.map((m) => (
               <div
                 key={m.client}
                 style={{
-                  background: 'var(--nf-white)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: '12px',
-                  padding: '36px 32px',
-                  display: 'flex',
-                  flexDirection: 'column',
+                  background: '#FFFFFF',
+                  border: '1px solid #E5E7EB',
+                  borderRadius: '16px',
+                  padding: '30px 28px',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.02)',
                   position: 'relative',
                   overflow: 'hidden',
-                  boxShadow: '0 8px 24px -12px rgba(10, 10, 11, 0.08)',
                 }}
               >
                 <div
@@ -187,47 +239,45 @@ export const AboutSection: React.FC = () => {
                     background: 'var(--nf-red)',
                   }}
                 />
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
                   <span
                     style={{
                       fontFamily: 'var(--font-mono)',
-                      fontSize: '12px',
+                      fontSize: '11.5px',
                       fontWeight: 700,
                       color: 'var(--nf-red)',
                       background: 'rgba(224, 31, 38, 0.08)',
-                      padding: '4px 10px',
-                      borderRadius: 'var(--radius-pill)',
+                      padding: '3px 9px',
+                      borderRadius: '9999px',
                     }}
                   >
                     {m.year}
                   </span>
                   <span
                     style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: '12px',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '11px',
                       fontWeight: 700,
-                      color: 'var(--nf-gray-400)',
+                      color: '#94A3B8',
                       textTransform: 'uppercase',
-                      letterSpacing: '0.04em',
                     }}
                   >
                     {m.tag}
                   </span>
                 </div>
 
-                <div
+                <h4
                   style={{
                     fontFamily: 'var(--font-display)',
-                    fontSize: '22px',
+                    fontSize: '20px',
                     fontWeight: 800,
-                    marginBottom: '14px',
-                    color: 'var(--nf-ink-950)',
+                    color: '#0F172A',
+                    margin: '0 0 10px',
                   }}
                 >
                   {m.client}
-                </div>
-
-                <p style={{ color: 'var(--nf-gray-500)', fontSize: '14px', lineHeight: 1.65, margin: 0 }}>
+                </h4>
+                <p style={{ fontSize: '13.5px', color: '#475569', lineHeight: 1.6, margin: 0 }}>
                   {m.desc}
                 </p>
               </div>
@@ -235,31 +285,28 @@ export const AboutSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Official 4 G.R.O.W. Cultural Pillars from nforceone.com */}
+        {/* 4 Cultural Pillars (G.R.O.W.) */}
         <div>
-          <div style={{ marginBottom: '40px' }}>
-            <Eyebrow>Our Culture</Eyebrow>
+          <div style={{ marginBottom: '32px' }}>
+            <Eyebrow>Core Culture</Eyebrow>
             <h3
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(26px, 3.4vw, 40px)',
+                fontSize: 'clamp(26px, 3.2vw, 38px)',
                 fontWeight: 800,
-                letterSpacing: '-0.01em',
-                margin: '14px 0 0',
-                maxWidth: '720px',
+                letterSpacing: '-0.015em',
+                color: '#0F172A',
+                margin: '12px 0 0',
               }}
             >
-              Built around four key attributes that differentiate us.
+              The G.R.O.W. Framework
             </h3>
-            <p style={{ color: 'var(--nf-gray-500)', fontSize: '15px', marginTop: '10px', maxWidth: '580px' }}>
-              Over 100 professionals united across India and the US, delivering technical excellence with a human touch.
-            </p>
           </div>
 
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
               gap: '20px',
             }}
           >
@@ -267,49 +314,43 @@ export const AboutSection: React.FC = () => {
               <div
                 key={val.title}
                 style={{
-                  background: 'var(--nf-white)',
-                  border: '1px solid var(--border-light)',
-                  borderRadius: '12px',
-                  padding: '32px 28px',
-                  transition: 'transform 240ms var(--ease-out), box-shadow 240ms',
+                  background: '#FFFFFF',
+                  border: '1px solid #E5E7EB',
+                  borderRadius: '16px',
+                  padding: '28px 24px',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.02)',
                 }}
               >
-                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '18px' }}>
-                  <div
-                    style={{
-                      width: '40px',
-                      height: '40px',
-                      borderRadius: '10px',
-                      background: 'rgba(224, 31, 38, 0.1)',
-                      color: 'var(--nf-red)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontFamily: 'var(--font-display)',
-                      fontWeight: 800,
-                      fontSize: '18px',
-                    }}
-                  >
-                    {val.letter}
-                  </div>
-                  <div style={{ color: 'var(--nf-ink-950)' }}>
-                    <DynamicIcon name={val.icon} size={22} strokeWidth={1.75} />
-                  </div>
-                </div>
-
                 <div
                   style={{
+                    width: '36px',
+                    height: '36px',
+                    borderRadius: '10px',
+                    background: 'rgba(224, 31, 38, 0.08)',
+                    color: 'var(--nf-red)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     fontFamily: 'var(--font-display)',
+                    fontWeight: 800,
                     fontSize: '18px',
+                    marginBottom: '14px',
+                  }}
+                >
+                  {val.letter}
+                </div>
+                <h4
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '17px',
                     fontWeight: 700,
-                    marginBottom: '10px',
-                    color: 'var(--nf-ink-950)',
+                    color: '#0F172A',
+                    margin: '0 0 8px',
                   }}
                 >
                   {val.title}
-                </div>
-
-                <p style={{ color: 'var(--nf-gray-500)', fontSize: '13.5px', lineHeight: 1.6, margin: 0 }}>
+                </h4>
+                <p style={{ fontSize: '13px', color: '#64748B', lineHeight: 1.55, margin: 0 }}>
                   {val.desc}
                 </p>
               </div>
