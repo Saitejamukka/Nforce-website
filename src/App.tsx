@@ -13,6 +13,7 @@ import { CaseStudiesSection } from './components/sections/CaseStudiesSection';
 import { EngagementModelsSection } from './components/sections/EngagementModelsSection';
 import { PartnersMarquee } from './components/sections/PartnersMarquee';
 import { AboutSection } from './components/sections/AboutSection';
+import { CareersSection } from './components/sections/CareersSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { FaqSection } from './components/sections/FaqSection';
 import { ChatWidget } from './components/sections/ChatWidget';
@@ -54,6 +55,9 @@ export default function App() {
 
       {/* Who We Are: Strategic Photography & Culture (#about) */}
       <AboutSection />
+
+      {/* Careers & Culture: Open Roles & Employee Voices (#careers) */}
+      <CareersSection />
 
       {/* Chapter 5: LET'S TALK -> Contact Consultation (#contact) */}
       <ContactSection />

@@ -13,6 +13,7 @@ const NAV_ITEMS = [
   { label: 'Outcomes', href: '#outcomes' },
   { label: 'Engagement', href: '#engagement' },
   { label: 'About', href: '#about' },
+  { label: 'Careers', href: '#careers' },
 ];
 
 export const Header: React.FC<HeaderProps> = ({ onToggleMenu }) => {
