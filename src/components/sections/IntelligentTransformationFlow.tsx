@@ -151,7 +151,7 @@ export const IntelligentTransformationFlow: React.FC<Props> = ({ activeAreaId, o
   const [activeSignalNode, setActiveSignalNode] = useState<string>('core');
 
   const animFrameRef = useRef<number | null>(null);
-  const interactionTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const interactionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const currentPhase = TRANSFORMATION_PHASES[phaseIndex];
   const topology = TOPOLOGY_MAP[currentPhase.name] || TOPOLOGY_MAP.TELECOM;
